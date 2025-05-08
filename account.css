@@ -48,11 +48,6 @@ body {
     font-weight: bold;
 }
 
-/* .left-panel h2 {
-    font-size: 32px;
-} */
-
-/* Right panel: Form */
 .right-panel {
     flex: 1;
     padding: 30px;
@@ -94,7 +89,6 @@ button {
 button:hover {
     opacity: 0.9;
     background-color: rgba(71, 128, 193, 0.773);
-
 }
 
 p {
