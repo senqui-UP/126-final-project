@@ -1,0 +1,29 @@
+.freedomWall {
+    width: 810px;
+    height: 580px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    left: 8%;
+    top: 15%;
+    position: absolute;
+}
+
+.poll {
+    width: 450px;
+    height: 410px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    left: 62%;
+    top: 15%;
+    position: absolute;
+}
+
+.spotify {
+    width: 450px;
+    height: 155px;
+    border: 1px solid blue;
+    box-sizing: border-box;
+    left: 62%;
+    top: 74%;
+    position: absolute;
+}
