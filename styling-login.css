@@ -1,19 +1,8 @@
-* {
-    font-family: Pangolin;
-}
-
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
-
-.pangolin-regular {
-    font-family: "Pangolin", cursive;
-    font-weight: 400;
-    font-style: normal;
-}  
 
 body {
     display: flex;
@@ -36,7 +25,6 @@ body {
 /* Left panel: Branding */
 .left-panel {
     flex: 1;
-    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,10 +68,11 @@ button {
     font-size: 18px;
     width: 99.5%;
     align-content: center;
-    background-color: cyan;
+    background-color: #004AAD;
     border: 1px solid black;
     cursor: pointer;
     border-radius: 5px;
+    color: white;
 }
 
 button:hover {

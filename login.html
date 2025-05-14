@@ -3,19 +3,20 @@
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preload" href="Logo.png" as="image">
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
         
         <title>UNCENSORED 23</title>
         <meta charset = "UTF-8">
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
-        <link rel="stylesheet" type="text/css" href="account.css">
+        <link rel="stylesheet" type="text/css" href="styling-login.css">
+        <link rel="stylesheet" type="text/css" href="styling.css">
     </head>
 
     <body>
         <div class= "wrapper">
             <div class="left-panel">
-                <h1>Uncensored</h1> 
-                <h2><br>Batch 23'</h2>
+                <img src="./Images/Logo.png" alt="logo" width="600px" height="500px">
             </div>
     
             <div class="right-panel">
@@ -28,7 +29,7 @@
                 <input type="password" placeholder="Enter Password" name="psw" required>
                 <br>
         
-                <button type="submit">Login</button>
+                <button onClick="window.location.href='homepage.html'">Login</button>
                 <br>
                 <p> Don't have an account? <a href="signUp.html">SIGN UP</a></p>
             </div>
