@@ -64,11 +64,10 @@
     }
 
     .swiper-slide.card {
-        flex: 0 0 250px;
-        display: flex;
         background: #fff;
         border-radius: 12px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        display: flex;
         flex-direction: column;
         overflow: hidden;
         transition: transform 0.3s ease;
@@ -122,11 +121,11 @@
     height: 40px;
     }
 
-    .prev {
+    .swiper-button-prev {
     left: 0px;
     }
 
-    .next {
+    .swiper-button-next {
     right: 0px; 
     }
 
