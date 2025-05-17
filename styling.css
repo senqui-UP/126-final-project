@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    height: 100%;
     font-family: Pangolin;
 }
 
@@ -12,12 +11,15 @@
 }  
 
 header {
-    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
     height: fit-content;
 }
 
 nav {
-    background-color: #1A090D;    /* url('Images/CoffeeBanner.jpg'); */
+    background-color: #1A090D;   
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -30,62 +32,8 @@ nav {
     a:hover { color: #004AAD}
 }
 
-
-
-
-
-/* ===     HOME PAGE     === */
-#homepage {
-    /*background-image: ; */
-    overflow-y: hidden;
-}
-
-.home {
-    border: 1px solid #004AAD;
-    padding: 0% 5% 0% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
-    h1 {
-        font-size: 60px;
-    }
-
-    .home-about {
-        border: 1px solid #5DE0E6;
-        height: fit-content;
-        align-items: center;
-    }
-
-    .home-links {
-        border: 1px solid #5DE0E6;
-        height: fit-content;
-        padding-left: 30px;
-    }
-
-    img {
-        display: block;
-        width: 30vw;
-        height: 25vh;
-        padding: 10px;
-    }
-
-    img:hover {
-        transform: scale(1.05);
-    }
-
-}
-
-.gallery {
-    border: 1px solid #004AAD;
-    padding: 0% 5% 0% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-
-    h1 {
-        font-size: 60px;
-    }
+.acc-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }

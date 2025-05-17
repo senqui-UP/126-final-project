@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
+    font-family: Pangolin;
+}
+
+body {
+    /* background-image: url(./Images/homepage/); */
+    background-position: bottom left;
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+.gallery {
+    border: 1px solid #004AAD;
+    padding: 0% 5% 0% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+    h1 {
+        font-size: 60px;
+    }
+}

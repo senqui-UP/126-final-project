@@ -1,8 +1,19 @@
+* {
+    font-family: Pangolin;
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+.pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}  
 
 body {
     display: flex;
@@ -63,6 +74,12 @@ input[type="text"], input[type="password"] {
     border-radius: 5px;
 }
 
+.error-message {
+    color: red !important;
+    display: block !important;
+    margin-bottom: 5px;
+}
+
 button {
     padding: 10px;
     font-size: 18px;
@@ -81,7 +98,7 @@ button:hover {
 }
 
 p {
-    margin-top: 15px;
+    margin-top: 20px;
     font-size: 14px;
     text-align: center;
 }
@@ -93,12 +110,12 @@ p a {
 }
 
 .sign-in{
-    margin-top: 25px;
+    margin-top: 20px;
     font-size: 14px;
     text-align: center;
 }
 
-.link-sign-in{
+.link-sign-in {
     text-decoration: none;
     font-weight: bold;
     text-align: center;

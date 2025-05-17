@@ -1,0 +1,68 @@
+body {
+    background-color: #FCF6EE;
+}
+
+.wrapper {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+}
+
+.account-deets {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-left: 165px;
+}
+
+.img-icon {
+    width: 150px;
+    height: 150px;
+    margin: 45px auto 0 auto;
+    align-content: center;
+    display: block;
+}
+
+.account-deets h3 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+button {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    gap: 7px;                 
+
+    padding: 10px;
+    font-size: 18px;
+    width: 50%;
+    margin: 30px auto 0 auto;  
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+}
+
+.material-symbols-outlined {
+    font-size: 20px;
+}
+
+button:hover {
+    opacity: 0.9px;
+    background-color: maroon;
+}
+
+.fw-entries {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 800px;
+    height: 650px;
+}
