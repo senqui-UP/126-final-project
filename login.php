@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <title>UNCENSORED 23 | Login</title>
     <meta charset="UTF-8">
     <meta name="author" content="Contreras-DelRosario-Quindao">
-    <link rel="stylesheet" type="text/css" href="account.css">
+    <link rel="stylesheet" type="text/css" href="styling-login.css">
     <link rel="preload" href="Images/Logo.png" as="image">
     <script src="scripts-login.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <body>
     <div class="wrapper">
         <div class="left-panel">
-            <img src="Logo.png" alt="logo" width="600px" height="500px">
+            <img src="Images/Logo.png" alt="logo" width="600px" height="500px">
         </div>
 
         <div class="right-panel">
