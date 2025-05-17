@@ -11,12 +11,15 @@
 }  
 
 header {
-    flex-shrink: 0;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
     height: fit-content;
 }
 
 nav {
-    background-color: #1A090D;    /* url('Images/CoffeeBanner.jpg'); */
+    background-color: #1A090D;   
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -27,4 +30,10 @@ nav {
 
     a       { color: #F8FFFF; }
     a:hover { color: #004AAD}
+}
+
+.acc-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
 }
