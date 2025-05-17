@@ -1,0 +1,37 @@
+* {
+    font-family: Pangolin;
+}
+
+.pangolin-regular {
+    font-family: "Pangolin", cursive;
+    font-weight: 400;
+    font-style: normal;
+}  
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.account-deets {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 500px;
+    height: 650px;
+    margin-top: 20px;
+    margin-left: 110px;
+}
+
+.account-deets img {
+    width: 100px;
+    height: 100px;
+    justify-content: center;
+}
+
+.fw-entries {
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 800px;
+    height: 650px;
+    margin-top: 20px;
+}

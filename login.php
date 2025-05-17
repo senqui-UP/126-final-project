@@ -39,10 +39,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>UNCENSORED 23 | Login</title>
+    <title>UNCENSORED 23</title>
     <meta charset="UTF-8">
     <meta name="author" content="Contreras-DelRosario-Quindao">
     <link rel="stylesheet" type="text/css" href="styling-login.css">
+    <link rel="icon" type="image/x-icon" href="./Images/Icon.png">  
     <link rel="preload" href="Images/Logo.png" as="image">
     <script src="scripts-login.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
