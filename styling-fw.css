@@ -8,7 +8,6 @@
     position: absolute;
 }
 
-<<<<<<< HEAD
 .poll {
     width: 450px;
     height: 410px;
@@ -16,63 +15,6 @@
     box-sizing: border-box;
     left: 62%;
     top: 15%;
-    position: absolute;
-}
-
-.spotify {
-    width: 450px;
-    height: 155px;
-=======
-#poll {
-    width: 400px;
-    height: 370px;
-    padding: 24px;
-    background: black;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    position: absolute;
-    left: 62%;
-    top: 15%;
-    font-family: 'Pangolin', sans-serif;
-}
-
-#poll h2{
-    margin-top:0%;
-    font-size: 2rem;
-    color: white;
-}
-
-#poll h3 {
-    font-size: 1.5rem;
-    margin-bottom: 24px;
-    color: #333;
-    text-align: center;
-}
-
-#poll button {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 10px 0;
-    font-size: 1rem;
-    border: 2px solid #ddd;
-    border-radius: 12px;
-    background-color: #f9f9f9;
-    color: #333;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-align: left;
-    position: relative;
-}
-
-#poll button:hover {
-    border-color: #6c63ff;
-    background-color: #eef;
-}
-
-#poll .result-bar {
-    height: 8px;
-    background-color: #6c63ff;
-    border-radius: 4px;
     position: absolute;
     background: #fff;
     border-radius: 10px;
@@ -132,16 +74,11 @@
 
 .spotify {
     width: 450px;
-    height: 156px;
->>>>>>> Sprint-3
+    height: 155px;
     border: 1px solid blue;
     box-sizing: border-box;
     left: 62%;
     top: 74%;
     position: absolute;
-<<<<<<< HEAD
-}
-=======
 }
 
->>>>>>> Sprint-3

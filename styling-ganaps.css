@@ -12,7 +12,7 @@
     body {
         display: flex;
         flex-direction: column;
-<<<<<<< HEAD
+        align-items: center;
         padding: 40px 20px;
     }
     
@@ -24,66 +24,21 @@
         margin-left: 40px;
         margin-top: 40px;
         color: #0B0742;
-=======
-        /*background-image: url(./Images/ganaps/bg.png);*/
-        background-color: #fcf6ee;  
-    }
-
-    nav {
-        background-color: #1A090D;   
-        background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-        overflow: hidden;
-        padding: 1%;
-        height: auto;
-        text-align: right;
-
-        a       { color: #F8FFFF; }
-        a:hover { color: #004AAD}
-        font-family: 'Pangolin', sans-serif;
-    }
-
-    main {
-        padding-top: 80px;
-        font-family: 'Pangolin', sans-serif;
-    }
-
-    h1 {
-        margin-left: 10px;
-        margin-bottom: 10px;
-        color: #003272;
-        text-align: left;
->>>>>>> Sprint-3
     }
 
     body section {
         display: flex;
         flex-direction: column;
-<<<<<<< HEAD
         align-items: center; 
         width: 100%;
         padding: 40px 20px;
-=======
-        width: 100%;
-        padding: 20px 20px;
->>>>>>> Sprint-3
     }    
 
     .swiper{
         width: 100%;
-<<<<<<< HEAD
         max-width: 1100px;
-        padding: 20px;
+        padding: 20px 60px;
         overflow: visible !important; 
-        position: relative;
-=======
-        max-width: 100%;
-        padding: 0px;
-        overflow: visible;
-        position: relative;
-        color:black;
->>>>>>> Sprint-3
     }
   
     .swiper-wrapper {
@@ -92,37 +47,26 @@
     }
 
     .swiper-slide.card {
+        flex: 0 0 250px;
+        display: flex;
         background: #fff;
         border-radius: 12px;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
-        display: flex;
         flex-direction: column;
         overflow: hidden;
-<<<<<<< HEAD
         height: 100%;
-        width: 250px;
+        width: 350px;
         transition: transform 0.3s ease;
         margin: 5px;
     }
     
-=======
-        transition: transform 0.3s ease;
-        margin: 5px;
-        margin-bottom: 4%;
-    }
-
->>>>>>> Sprint-3
     .card-image-container {
         width: 100%;
         aspect-ratio: 16 / 9;
         overflow: hidden;
         position: relative;
     }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> Sprint-3
     .card-image-container img {
         width: 100%;
         height: 100%;
@@ -137,15 +81,9 @@
     .card-content {
         padding: 16px;
     }
-<<<<<<< HEAD
         
     .card-content h3 {
         color: #120C6E;
-=======
-    
-    .card-content h3 {
-        color: #004AAD;
->>>>>>> Sprint-3
         margin-bottom: 10px;
         font-size: 1.1rem;
     }
@@ -160,40 +98,32 @@
         text-align: center;
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-<<<<<<< HEAD
-    color: #120C6E;
-=======
-    color: white;
->>>>>>> Sprint-3
-    top: 45%; 
-    width: 40px;
-    height: 40px;
+    .prev,.next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: #120C6E;
+        color: white;
+        border: none;
+        padding: 12px 18px;
+        cursor: pointer;
+        font-size: 20px;
+        z-index: 2;
     }
 
-    .swiper-button-prev {
+    .prev {
     left: 0px;
     }
 
-    .swiper-button-next {
+    .next {
     right: 0px; 
     }
 
     .swiper-pagination-bullet {
-<<<<<<< HEAD
         background: #3e397f;
         opacity: 0.7;
     }
     .swiper-pagination-bullet-active {
         background: #120C6E;
-=======
-        margin-top: 30%;
-        background: #4781cc7b;
-        opacity: 0.7;
-    }
-    .swiper-pagination-bullet-active {
-        background: #004AAD;
->>>>>>> Sprint-3
         opacity: 1;
     }

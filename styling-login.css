@@ -1,28 +1,19 @@
-<<<<<<< HEAD
-=======
 * {
-    font-family: Pangolin;
+    font-family: "Pangolin", cursive;
 }
 
->>>>>>> Sprint-3
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-<<<<<<< HEAD
-}
-
-=======
-    font-family: Arial, sans-serif;
 }
 
 .pangolin-regular {
     font-family: "Pangolin", cursive;
     font-weight: 400;
     font-style: normal;
-}  
+} 
 
->>>>>>> Sprint-3
 body {
     display: flex;
     justify-content: center;
@@ -82,15 +73,6 @@ input[type="text"], input[type="password"] {
     border-radius: 5px;
 }
 
-<<<<<<< HEAD
-=======
-.error-message {
-    color: red !important;
-    display: block !important;
-    margin-bottom: 5px;
-}
-
->>>>>>> Sprint-3
 button {
     padding: 10px;
     font-size: 18px;
@@ -109,11 +91,7 @@ button:hover {
 }
 
 p {
-<<<<<<< HEAD
     margin-top: 15px;
-=======
-    margin-top: 20px;
->>>>>>> Sprint-3
     font-size: 14px;
     text-align: center;
 }
@@ -125,20 +103,12 @@ p a {
 }
 
 .sign-in{
-<<<<<<< HEAD
     margin-top: 25px;
-=======
-    margin-top: 20px;
->>>>>>> Sprint-3
     font-size: 14px;
     text-align: center;
 }
 
-<<<<<<< HEAD
 .link-sign-in{
-=======
-.link-sign-in {
->>>>>>> Sprint-3
     text-decoration: none;
     font-weight: bold;
     text-align: center;
