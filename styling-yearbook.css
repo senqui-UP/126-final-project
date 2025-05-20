@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    height: 100%;
 
     font-family: Pangolin;
 }
@@ -14,15 +13,21 @@ body {
     overflow: hidden;
 }
 
-.gallery {
+.yearbook {
     border: 1px solid #004AAD;
     padding: 0% 5% 0% 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
 
     h1 {
+        border: 1px solid #004AAD;
+        color: red;
         font-size: 60px;
+        height: fit-content;
+        text-align: center;
     }
+}
+
+#flipbook-container {
+    border: 1px solid red;
+    width: 400px;
+    height: 600px;
 }

@@ -5,13 +5,14 @@
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
         
         <title>Gallery - UNCENSORED 23</title>
-        <link rel="icon" type="image/x-icon" href="./Images/Images/Icon.png">  
+        <link rel="icon" type="image/x-icon" href="./Images/Icons/Icon.png">  
 
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="styling.css">
         <link rel="stylesheet" type="text/css" href="styling-yearbook.css">
+        <link rel="stylesheet" type="text/css" href="styling.css">
         
-        <script src = "script.js"></script>
+        <script src="./flipbook-viewer/dist/flipbook-viewer.js"></script>
+        <script type="module" src="script-yb.js"></script>
     </head>
 
     <body>
@@ -26,9 +27,16 @@
             </a>             
         </nav>
 
-        <main id = "yearbook">
-            <h1>this is yearbook</h1>
-            <h3>insert flipbook API here</h3>
+        <main class = "yearbook">
+            <!-- <img src="./Images/Icons/Yearbook-Icon.png"> -->
+            <h1>Yearbook</h1>
+
+            <div id="flipbook-container"></div>
+            <button onclick="viewer.flip_back()">Back</button>
+            <button onclick="viewer.flip_forward()">Next</button>
+            <button onclick="viewer.zoom()">Zoom</button>
         </main>
     </body>
 </html>
+
+
