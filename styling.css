@@ -1,7 +1,10 @@
 * {
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     height: 100%;
+=======
+>>>>>>> Sprint-3
     font-family: Pangolin;
 }
 
@@ -12,12 +15,23 @@
 }  
 
 header {
+<<<<<<< HEAD
     flex-shrink: 0;
+=======
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+    width: 100%;
+>>>>>>> Sprint-3
     height: fit-content;
 }
 
 nav {
+<<<<<<< HEAD
     background-color: #1A090D;    /* url('Images/CoffeeBanner.jpg'); */
+=======
+    background-color: #1A090D;   
+>>>>>>> Sprint-3
     background-size: cover;
     background-position: top;
     background-attachment: fixed;
@@ -30,6 +44,7 @@ nav {
     a:hover { color: #004AAD}
 }
 
+<<<<<<< HEAD
 
 
 
@@ -88,4 +103,10 @@ nav {
     h1 {
         font-size: 60px;
     }
+=======
+.acc-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+>>>>>>> Sprint-3
 }

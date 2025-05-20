@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: Pangolin;
+}
+
+body {
+    /* background-image: url(./Images/homepage/); */
+    background-position: bottom left;
+    background-size: cover;
+    
+    overflow: hidden;
+}
+
+.yearbook {
+    border: 1px solid #004AAD;
+    padding: 0% 5% 0% 5%;
+
+    h1 {
+        border: 1px solid #004AAD;
+        color: red;
+        font-size: 60px;
+        height: fit-content;
+        text-align: center;
+    }
+}
+
+#flipbook-container {
+    border: 1px solid red;
+    width: 400px;
+    height: 600px;
+}
