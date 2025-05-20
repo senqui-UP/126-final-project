@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <head>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="Images/Logo.png" as="image">
+        <link rel="preload" href="Images/Icons/Icon.png" as="image">
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
         <title>UNCENSORED 23</title>
