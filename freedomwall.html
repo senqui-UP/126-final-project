@@ -1,17 +1,50 @@
+<!-- <?php
+include 'DBConnector.php';
+
+header('Content-Type: application/json');
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $content = $_POST['content'];
+    $user_id = 1; // Set to 1 for default anonymous user
+
+    $stmt1 = $conn->prepare("INSERT INTO post (content) VALUES (?)");
+    $stmt1->bind_param("s", $content);
+    $stmt1->execute();
+    $post_id = $conn->insert_id;
+
+    $stmt2 = $conn->prepare("INSERT INTO posting (id, postID) VALUES (?, ?)");
+    $stmt2->bind_param("ii", $user_id, $post_id);
+    $stmt2->execute();
+
+    echo json_encode(["status" => "success"]);
+    exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $sql = "SELECT post.content FROM posting JOIN post ON posting.postID = post.postID ORDER BY post.postID DESC";
+    $result = $conn->query($sql);
+
+    $posts = [];
+    while ($row = $result->fetch_assoc()) {
+        $posts[] = $row['content'];
+    }
+
+    echo json_encode($posts);
+    exit;
+}
+?> -->
+
 <!DOCTYPE html>
 <html>
     <head>
+        <title>UNCENSORED</title>
         <meta charset = "UTF-8">
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
-        
-        <title>Freedom Wall - UNCENSORED 23</title>
-        <link rel="icon" type="image/x-icon" href="./Images/Icons/Icon.png">  
 
-        <script src = "script-fw.js"></script>
-        <link rel="stylesheet" type="text/css" href="stylingfw.css">
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=flag,reply" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="styling.css">
         <link rel="stylesheet" type="text/css" href="styling-fw.css">
-        <script type="text/javascript" src="freedomwall.js"></script>
     </head>
 
     <body>
@@ -23,22 +56,28 @@
             &nbsp; &nbsp;
             <a href="account.php">
                 <img class="acc-icon" src="./Images/Icons/Account.png">
-            </a>                 
+            </a>              
         </nav>
 
         <div class="freedomWall">
-            <img src="./Images/Icons/FW-Icon.png" alt="FW Icon">
             <h1>Freedom Wall</h1>
+            
+            <div id="post-box" class="post-box">
+                <textarea id="post-input" placeholder="Write your message..."></textarea>
+                <br>
+                <button id="post-button">Post</button>
+            </div>
+
+            <div id="posts-container" class="posts-container">
+                <!-- Posts will show here -->
+            </div>
         </div>
 
-        <div class="poll">
-            <div class="question"></div>
-            <div class="answers"></div>
-        </div>
+        <script src="scripts-freedomwall.js"></script>
 
+        <div class="poll"></div>
         <div class="spotify">
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0njbZ1fbv5llNEsrTfBLcp?utm_source=generator&theme=0" width="100%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </body>
-
 </html>
