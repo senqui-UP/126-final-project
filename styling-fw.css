@@ -2,12 +2,19 @@
   font-family: Pangolin, sans-serif;
 }
 
+body {
+  background-color: #FCF6EE;
+  /* background-image: url(https://cdn.pixabay.com/photo/2021/06/19/20/39/stars-6349426_960_720.jpg); */
+  /* background-image: radial-gradient(circle at 50% 50%,#af55e7,#004aad); */
+}
+
 .freedomWall {
   width: 810px;
-  height: 580px;
+  height: 600%;
   left: 8%;
   top: 15%;
   position: absolute;
+  background-color: #004aad;
 }
 
 .poll {
@@ -30,28 +37,16 @@
   position: fixed;
 }
 
-/* nav {
-  background-color: #333;
-  padding: 10px;
-  text-align: center;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  margin: 0 10px;
-} */
-
-.freedomWall h1 {
+/* .freedomWall h1 {
+  padding-top: 25px;
   padding-bottom: 25px;
-}
+} */
 
 .wall-container {
   position: relative;
   max-width: 700px;
   margin: 30px auto;         /* Centers the container */
   padding: 20px;
-  background: white;
   border-radius: 10px;
   box-shadow: 0 0 10px #ccc;
   box-sizing: border-box;
@@ -88,26 +83,34 @@ nav a {
   padding-bottom: 0;
   margin-bottom: 5px;
   font-weight: bold;
+  color: white;
+}
+
+.post-box {
+  margin-left: 15px;
+  padding-top: 20px;
 }
 
 .post-box textarea {
   position: relative;
   cursor: text;
-  width: 90%;
-  height: 65px;
+  width: 98%;
+  height: 80px;
   padding: 10px;
   font-size: 14px;
   margin-bottom: 10px;
   resize: none;
   box-sizing: border-box;
   margin-top: 0;
+  background-color: #FCF6EE;
+  /* background-color: white; */
 }
 
 .post-box button {
   padding: 10px 20px;
   font-size: 15px;
   cursor: pointer;
-  margin-left: 656px;
+  margin-left: 707px;
 }
 
 .posts-container {
@@ -118,12 +121,14 @@ nav a {
 }
 
 .post {
-  border-top: 1px solid #ccc;
-  /* border-bottom: 1px solid #ccc; */
+  /* border-top: 1px solid #ccc; */
+  border: 10px solid #004aad;
+  background-color: #FCF6EE;
+  /* background-color: white; */
   padding: 15px 0;
-  width: 103%;
-  /* margin-top: 10px; */
+  width: 110%;
   box-sizing: border-box;
+  margin-left: 15px;
 }
 
 .post-footer {
@@ -131,8 +136,8 @@ nav a {
 }
 
 .message {
-  margin-left: 10px;
-  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-bottom: 10px;
   padding: 10px;
   white-space: pre-wrap;
   word-wrap: break-word;
@@ -147,7 +152,7 @@ nav a {
 }
 
 .postID {
-  color: blue;
+  color: #004aad;
   font-weight: bold;
   text-decoration: underline;
 }
@@ -188,7 +193,7 @@ nav a {
   height: 40px;
   border-radius: 50%;
   margin-right: 10px;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .material-symbols-outlined {
@@ -196,7 +201,8 @@ nav a {
 }
 
 .reply-button, .flag-button {
-  background-color: white;
+  background-color: #FCF6EE;
+  /* background-color: white; */
   border: none;
 }
 
@@ -207,7 +213,7 @@ nav a {
 }
 
 .reply-button {
-  margin-left: 385px;
+  margin-left: 410px;
 }
 
 .flag-button {
@@ -215,6 +221,6 @@ nav a {
 }
 
 .replies {
-  border-top: 1px solid #ccc;
+  /* border-top: 1px solid #ccc; */
   max-width: 100%;
 }

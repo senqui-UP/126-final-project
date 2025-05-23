@@ -11,7 +11,7 @@
 }  
 
 header {
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 10000;
     width: 100%;
@@ -28,12 +28,15 @@ nav {
     height: auto;
     text-align: right;
 
-    a       { color: #F8FFFF; }
+    a       { color: #F8FFFF;
+              text-decoration: none;
+              margin-left: 10px;}
     a:hover { color: #004AAD}
 }
 
 .acc-icon {
     width: 18px;
     height: 18px;
+    margin-right: 10px;
     object-fit: contain;
 }

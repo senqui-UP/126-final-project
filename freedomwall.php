@@ -96,19 +96,21 @@ header("Content-Type: text/html");
     </head>
 
     <body>
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="ganaps.html">Ganaps</a>
-            <a href="yearbook.html">Yearbook</a>
-            <a href="freedomwall.php">Freedom Wall</a>
-            &nbsp; &nbsp;
-            <a href="account.php">
-                <img class="acc-icon" src="./Images/Icons/Account.png">
-            </a>              
-        </nav>
+        <header>
+            <nav>
+                <a href="homepage.html">Home</a>
+                <a href="ganaps.html">Ganaps</a>
+                <a href="yearbook.html">Yearbook</a>
+                <a href="freedomwall.php">Freedom Wall</a>
+                &nbsp; &nbsp;
+                <a href="account.php">
+                    <img class="acc-icon" src="./Images/Icons/Account.png">
+                </a>              
+            </nav>
+        </header>
 
         <div class="freedomWall">
-            <h1>Freedom Wall</h1>
+            <!-- <h1>Freedom Wall</h1> -->
             
             <div id="post-box" class="post-box">
                 <div class id="reply-banner" class="reply-banner">
