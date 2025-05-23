@@ -3,35 +3,93 @@ const currentUser = {
   profilePic: "Images/default-img.png"
 };
 
-let postCounter = 1000;
 let replyingTo = null;
+
+// Load existing posts when the page loads
+window.onload = loadPosts;
+
+function loadPosts() {
+  fetch('freedomwall.php?fetch=posts')
+    .then(res => res.json())
+    .then(data => {
+      const postContainer = document.getElementById('posts-container');
+      postContainer.innerHTML = '';
+
+      for (let i = data.length - 1; i >= 0; i--) {
+        const post = data[i];
+        let message = post.content;
+
+        if (post.reply_to) {
+          message = `reply to <span class="repID">FWBU#${post.reply_to}</span> ${message}`;
+        }
+        
+        addPost(message, currentUser,`FWBU#${post.postID}`);
+      };
+    })
+    .catch(err => {
+      console.error("Failed to load posts:", err);
+      alert("Failed too load posts");
+    });
+}
 
 document.getElementById("post-button").addEventListener("click", function () {
   const input = document.getElementById("post-input");
   const message = input.value.trim();
 
   if (!message) {
-    alert("Please write a message")
-    return
-  };
-
-  const postID = `FWBU#${postCounter++}`;
-
-  if (replyingTo) {
-    const replyToID = replyingTo.getAttribute("data-id");
-    const fullMessage = `reply to <span class="repID">${replyToID}</span> ${message}`;
-    const repliesContainer = replyingTo.querySelector(".replies");
-
-    addReply(fullMessage, currentUser, repliesContainer, postID);
-    replyingTo = null;
-    input.placeholder = "Write your message...";
-  } else {
-    addPost(message, currentUser, postID);
+    alert("Please write a message");
+    return;
   }
 
-  getHeights();
-  expand();
-  input.value = "";
+  const bodyParameter = replyingTo
+    ? `content=${encodeURIComponent(message)}&reply_to=${encodeURIComponent(replyingTo.getAttribute("data-id").replace('FWBU#', ''))}`
+    : `content=${encodeURIComponent(message)}`;
+    
+  fetch("freedomwall.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: bodyParameter
+  })
+
+    .then(response => response.text())
+    .then(text => {
+    console.log("RAW RESPONSE:", text); // ✅ This will show if it's HTML or JSON
+
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch (err) {
+      console.error("Failed to parse JSON:", err);
+      alert("Server did not return valid JSON.");
+      return;
+    }
+
+    if (data.status === "success") {
+      const postID = `FWBU#${data.postID}`;
+
+      if (replyingTo) {
+        const replyToID = replyingTo.getAttribute("data-id");
+        const fullMessage = `reply to <span class="repID">${replyToID}</span> ${message}`;
+        const repliesContainer = replyingTo.querySelector(".replies");
+
+        addReply(fullMessage, currentUser, repliesContainer, postID);
+        replyingTo = null;
+        input.placeholder = "Write your message...";
+      } else {
+        addPost(message, currentUser, postID);
+      }
+
+      getHeights();
+      expand();
+      input.value = "";
+    } else {
+      alert("Error posting message.");
+    }
+    })
+    .catch(err => {
+      console.error("Error posting to server:", err);
+      alert("Network/server error.;")
+    });
 });
 
 function addPost(message, user, postID) {
@@ -48,7 +106,6 @@ function addReply(message, user, replyContainer, postID) {
   mainContainer.prepend(replyDiv);
 }
 
-// Core function that creates both posts & replies (recursive support)
 function createPostOrReply(message, user, postID) {
   const postDiv = document.createElement("div");
   postDiv.className = "post";
@@ -57,28 +114,26 @@ function createPostOrReply(message, user, postID) {
 
   postDiv.innerHTML = `
     <div class="user-info">
-      <img src="Images/default-img.png" alt="Profile Picture">
-      <div class="username">Freedom Wall ng Batch Uncensored</div>
+      <img src="${user.profilePic}" alt="Profile Picture">
+      <div class="username">${user.username}</div>
       <button class="reply-button" type="button"><span class="material-symbols-outlined">reply</span></button>
       <button class="flag-button" type="button"><span class="material-symbols-outlined">flag</span></button>
     </div>
-    <div class="message"><span class="postID">${postID}</span> ${message}</div>
+    <div class="message"><span class="postID">${postID}</span> <span class="content">${message}</span>
+    </div>
     <div class="replies"></div>
   `;
-
 
   postDiv.querySelector(".reply-button").addEventListener("click", function () {
     replyingTo = postDiv;
     document.getElementById("post-input").placeholder = `Replying to ${postID}...`;
-    postInput.focus();
-    // document.getElementById("post-input").focus();
+    document.getElementById("post-input").focus();
   });
 
-   postDiv.querySelector(".postID").addEventListener("click", function () {
+  postDiv.querySelector(".postID").addEventListener("click", function () {
     replyingTo = postDiv;
     document.getElementById("post-input").placeholder = `Replying to ${postID}...`;
-    postInput.focus();
-    // document.getElementById("post-input").focus();
+    document.getElementById("post-input").focus();
   });
 
   return postDiv;
@@ -91,37 +146,27 @@ document.addEventListener("click", function (e) {
     if (targetPost) {
       targetPost.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-  } 
-})
+  }
+});
 
-// keith part
+// Expandable message feature
 function getHeights() {
-  const message = document.getElementsByClassName('message');
-  for (e of message){
-      const height = e.getBoundingClientRect().height;
-      console.log(height);
-      if (height > 200 && !e.classList.contains("expandable")){
-        e.classList.add("expandable");
-        e.classList.add("collapse");
-      }
+  const messages = document.getElementsByClassName("message");
+  for (const e of messages) {
+    const height = e.getBoundingClientRect().height;
+    if (height > 200 && !e.classList.contains("expandable")) {
+      e.classList.add("expandable", "collapse");
+    }
   }
 }
 
 function expand() {
-  const expandMessage = document.getElementsByClassName("expandable");
-  console.log(expandMessage);
-  for (i of expandMessage) {
-    const test = i;
-
-    if (!test.classList.contains("fixed")) {
-      test.classList.add("fixed");
-
-      test.addEventListener("click", function (){
-        if (test.classList.contains("collapse")){
-          test.classList.remove("collapse")
-        } else if (!test.classList.contains("collapse")){
-          test.classList.add("collapse");
-        }
+  const expandableMessages = document.getElementsByClassName("expandable");
+  for (const msg of expandableMessages) {
+    if (!msg.classList.contains("fixed")) {
+      msg.classList.add("fixed");
+      msg.addEventListener("click", function () {
+        msg.classList.toggle("collapse");
       });
     }
   }

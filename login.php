@@ -1,4 +1,6 @@
 <?php
+
+session_start();
 include 'DBConnector.php';
 
 $error = " ";
@@ -24,7 +26,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             } elseif (!password_verify($psw, $user['password'])) {
                 $error = "Incorrect password.";
             } else {
-                session_start();
                 $_SESSION['user_id'] = $user['id'];
                 header("Location: homepage.html");
                 exit;
