@@ -113,7 +113,7 @@ header("Content-Type: text/html");
             <div id="post-box" class="post-box">
                 <div class id="reply-banner" class="reply-banner">
                     <span id="reply-text"></span>
-                    <button id="cancel-reply" class="cancel-reply" type="button"><span id="cancel-button" class="material-symbols-outlined">close</span>
+                    <button id="cancel-reply" class="cancel-reply" type="button" alt="Cancel"><span id="cancel-button" class="material-symbols-outlined">close</span>
                 </div>
                 <textarea id="post-input" placeholder="Write your message..."></textarea>
                 <br>

@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
     <body>
         <div class="wrapper">
             <div class="left-panel">
-                <img src="Images/Logo.png" alt="logo" width="600px" height="500px">
+                <img src="Images/Logo.png" alt="logo">
             </div>
 
             <div class="right-panel">
