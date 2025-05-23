@@ -62,7 +62,88 @@ button:hover {
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 10px;
-    overflow: hidden;
+    overflow-y: scroll;
     width: 800px;
-    height: 650px;
+    height: 600px;
+}
+
+.fw-entries h2 {
+    margin-top: 21px;
+    text-align: center;
+    position: sticky;
+}
+
+.title {
+    border-radius: 10px;
+    background-color: white;
+    z-index: 2;
+    width: 52.3%;
+    position: absolute;
+}
+
+ul.fw-entries-list {
+  list-style-type: none; /* Remove bullets */
+  padding-top: 5em; /* Remove padding */
+  padding-bottom: 2em;
+  margin: 0; /* Remove margins */
+}
+
+li.entries {
+    margin-left: 10%;
+    border-radius: 10px;
+    background-color: #FCF6EE;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.collapse {
+    max-height: 100px;
+}
+
+.fw-entries::-webkit-scrollbar {
+    width: 12px;
+}
+
+.fw-entries::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.fw-entries::-webkit-scrollbar-thumb {
+    background: #FCF6EE;
+    border-radius: 10em;
+}
+
+.fw-entries::-webkit-scrollbar-thumb:hover {
+    background: #FCF6EE;
+}
+
+.fw-entries {
+    scrollbar-width: thick;
+    scrollbar-color: #ccc white;
+}
+
+.entries.collapsible {
+    cursor: pointer;
+    transition: max-height 0.4s ease-in-out; /* Creates a smooth animation */
+}
+
+/* This is the style for when the item IS collapsed */
+.entries.collapsible.collapsed {
+    max-height: 200px; /* This should match the 'collapseThreshold' in the JS */
+    overflow: hidden;  /* This hides the text that doesn't fit */
+    position: relative; /* This is needed for the fade-out effect below */
+}
+
+.entries.collapsible.collapsed::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, white); /* IMPORTANT: Change 'white' if your background is a different color */
 }

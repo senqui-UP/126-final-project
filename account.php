@@ -16,13 +16,26 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("i", $user_id);
 $stmt->execute();
 $stmt->bind_result($username, $email, $password);
+
 $stmt->fetch();
+$stmt->close();
 
 if (!$username && !$email && !$password) {
     echo "User not found in database.<br>";
 }
 
+$post_sql = "SELECT posts.postID, posts.content
+             FROM posts
+             INNER JOIN posting ON posts.postID = posting.postID
+             WHERE posting.id = ? 
+             ORDER BY posts.postID DESC";
+
+$post_stmt = $conn->prepare($post_sql);
+$post_stmt->bind_param("i", $user_id);
+$post_stmt->execute();
+$post_result = $post_stmt->get_result();
 ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,7 +47,7 @@ if (!$username && !$email && !$password) {
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styling-accountinfo.css">
         <link rel="stylesheet" type="text/css" href="styling.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=logout" />    
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=logout" />  
     </head>
 
     <body>
@@ -60,9 +73,24 @@ if (!$username && !$email && !$password) {
             </div>
 
             <div class="fw-entries">
-                <h2>Freedom Wall Entries</h2>
+                <div class="title">
+                    <h2>Freedom Wall Entries</h2>
+                    <br>
+                </div>  
+                <?php if ($post_result->num_rows > 0): ?>
+                    <ul class="fw-entries-list">
+                        <?php while ($row = $post_result->fetch_assoc()): ?>
+                            <li class="entries">
+                                <strong>FWBU#<?= $row['postID'] ?></strong>:
+                                <?= nl2br($row['content']) ?>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
+                <?php else: ?>
+                    <p>No entries yet.</p>
+                <?php endif; ?>
             </div>
         </div>
-        
+        <script src="scripts-acct.js"></script>  
     </body>
 </html>

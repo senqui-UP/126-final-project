@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['fetch']) && $_GET['fetc
     exit;
 }
 
-// ==== Not an API call, continue with full HTML page ====
+// ==== continue with full HTML page ====
 header("Content-Type: text/html");
 ?>
 

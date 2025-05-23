@@ -24,8 +24,13 @@ function loadPosts() {
         }
         
         addPost(message, currentUser,`FWBU#${post.postID}`);
-      };
+      }
+
+      getHeights();
+      expand();
+      // input.value = "";
     })
+
     .catch(err => {
       console.error("Failed to load posts:", err);
       alert("Failed too load posts");
@@ -53,7 +58,7 @@ document.getElementById("post-button").addEventListener("click", function () {
 
     .then(response => response.text())
     .then(text => {
-    console.log("RAW RESPONSE:", text); // ✅ This will show if it's HTML or JSON
+    console.log("RAW RESPONSE:", text); //shows raw response error
 
     let data;
     try {
@@ -78,10 +83,7 @@ document.getElementById("post-button").addEventListener("click", function () {
       } else {
         addPost(message, currentUser, postID);
       }
-
-      getHeights();
-      expand();
-      input.value = "";
+      
     } else {
       alert("Error posting message.");
     }
@@ -152,6 +154,7 @@ document.addEventListener("click", function (e) {
 // Expandable message feature
 function getHeights() {
   const messages = document.getElementsByClassName("message");
+  console.log(messages);
   for (const e of messages) {
     const height = e.getBoundingClientRect().height;
     if (height > 200 && !e.classList.contains("expandable")) {
