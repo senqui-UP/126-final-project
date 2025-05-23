@@ -11,13 +11,13 @@
 }
 
 .poll {
-    width: 450px;
-    height: 410px;
-    border: 1px solid blue;
-    box-sizing: border-box;
-    left: 62%;
-    top: 15%;
-    position: absolute;
+  width: 450px;
+  height: 410px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+  left: 62%;
+  top: 15%;
+  position: fixed;
 }
 
 .spotify {
@@ -27,7 +27,7 @@
   box-sizing: border-box;
   left: 62%;
   top: 74%;
-  position: absolute;
+  position: fixed;
 }
 
 /* nav {
