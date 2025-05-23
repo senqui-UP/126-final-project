@@ -84,13 +84,13 @@ header("Content-Type: text/html");
 <!DOCTYPE html>
 <html>
     <head>
-        <title>UNCENSORED</title>
+        <title>Freedom Wall</title>
         <meta charset = "UTF-8">
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
         <link rel="icon" type="image/x-icon" href="Images/Icon.png">
 
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=flag,reply" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&icon_names=close,flag,reply" rel="stylesheet" />
         <link rel="stylesheet" type="text/css" href="styling.css">
         <link rel="stylesheet" type="text/css" href="styling-fw.css">
     </head>
@@ -111,6 +111,10 @@ header("Content-Type: text/html");
             <h1>Freedom Wall</h1>
             
             <div id="post-box" class="post-box">
+                <div class id="reply-banner" class="reply-banner">
+                    <span id="reply-text"></span>
+                    <button id="cancel-reply" class="cancel-reply" type="button"><span id="cancel-button" class="material-symbols-outlined">close</span>
+                </div>
                 <textarea id="post-input" placeholder="Write your message..."></textarea>
                 <br>
                 <button id="post-button">Post</button>

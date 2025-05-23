@@ -8,6 +8,18 @@ let replyingTo = null;
 // Load existing posts when the page loads
 window.onload = loadPosts;
 
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("reply-banner").style.display = "none";
+  document.getElementById("cancel-button").style.display = "none";
+    
+  document.getElementById("cancel-button").addEventListener("click", function () {
+    replyingTo = null;
+    document.getElementById("reply-banner").style.display = "none";
+    document.getElementById("cancel-button").style.display = "none";
+    document.getElementById("post-input").placeholder = "Write your message...";
+  });
+});
+
 function loadPosts() {
   fetch('freedomwall.php?fetch=posts')
     .then(res => res.json())
@@ -28,7 +40,6 @@ function loadPosts() {
 
       getHeights();
       expand();
-      // input.value = "";
     })
 
     .catch(err => {
@@ -79,15 +90,20 @@ document.getElementById("post-button").addEventListener("click", function () {
 
         addReply(fullMessage, currentUser, repliesContainer, postID);
         replyingTo = null;
+        document.getElementById("reply-banner").style.display = "none";
+        document.getElementById("cancel-button").style.display = "none";
         input.placeholder = "Write your message...";
       } else {
         addPost(message, currentUser, postID);
       }
-      
+
+      input.value = "";    
+      input.focus(); 
+
     } else {
       alert("Error posting message.");
     }
-    })
+  })
     .catch(err => {
       console.error("Error posting to server:", err);
       alert("Network/server error.;")
@@ -128,12 +144,18 @@ function createPostOrReply(message, user, postID) {
 
   postDiv.querySelector(".reply-button").addEventListener("click", function () {
     replyingTo = postDiv;
+    document.getElementById("reply-text").textContent = `Replying to ${postID}`;
+    document.getElementById("reply-banner").style.display = "flex";
+    document.getElementById("cancel-button").style.display = "block";
     document.getElementById("post-input").placeholder = `Replying to ${postID}...`;
     document.getElementById("post-input").focus();
   });
 
   postDiv.querySelector(".postID").addEventListener("click", function () {
     replyingTo = postDiv;
+    document.getElementById("reply-text").textContent = `Replying to ${postID}`;
+    document.getElementById("reply-banner").style.display = "flex";
+    document.getElementById("cancel-button").style.display = "block";
     document.getElementById("post-input").placeholder = `Replying to ${postID}...`;
     document.getElementById("post-input").focus();
   });
