@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: #FCF6EE;
+  background-color: #F8FFFF;
   /* background-image: url(https://cdn.pixabay.com/photo/2021/06/19/20/39/stars-6349426_960_720.jpg); */
   /* background-image: radial-gradient(circle at 50% 50%,#af55e7,#004aad); */
 }
@@ -102,7 +102,7 @@ body {
   resize: none;
   box-sizing: border-box;
   margin-top: 0;
-  background-color: #FCF6EE;
+  background-color: #F8FFFF;
   /* background-color: white; */
 }
 
@@ -123,7 +123,7 @@ body {
 .post {
   /* border-top: 1px solid #ccc; */
   border: 10px solid #004aad;
-  background-color: #FCF6EE;
+  background-color: #F8FFFF;
   /* background-color: white; */
   padding: 15px 0;
   width: 110%;
@@ -201,7 +201,7 @@ body {
 }
 
 .reply-button, .flag-button {
-  background-color: #FCF6EE;
+  background-color: #F8FFFF;
   /* background-color: white; */
   border: none;
 }

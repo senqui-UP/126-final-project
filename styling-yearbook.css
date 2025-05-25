@@ -1,33 +1,108 @@
-* {
-    margin: 0;
-    padding: 0;
-
-    font-family: Pangolin;
-}
-
 body {
     /* background-image: url(./Images/homepage/); */
-    background-position: bottom left;
-    background-size: cover;
-    
-    overflow: hidden;
+    background-color: #F8FFFF;
+    overflow-x: hidden;
+    padding-top: 3%;
 }
 
 .yearbook {
-    border: 1px solid #004AAD;
-    padding: 0% 5% 0% 5%;
+    padding: 0% 5% 5% 5%;
+    align-items: center;
+    justify-content: center;
 
+    .yb-icon {
+        width: 90px;
+        height: 90px;
+        display: inline-flex;
+        vertical-align: middle;
+    }
+    
     h1 {
-        border: 1px solid #004AAD;
-        color: red;
-        font-size: 60px;
-        height: fit-content;
+        color: #004AAD;
+        text-shadow: 3px 3px 2px #5de0e6;
+        font-size: 50px;
+        display: inline-flex;
+        vertical-align: middle;
+        justify-content: center;
+        align-items: center top;
+    }
+
+    .header {
+        width: 100%;
         text-align: center;
     }
 }
 
 #flipbook-container {
-    border: 1px solid red;
-    width: 400px;
-    height: 600px;
+    /* border: 2px solid yellow; */
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+}
+
+#flipbook-part {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .coverpage {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: contain;
+        z-index: 9999;
+        cursor: pointer;
+        width: 100%;
+        height: 100%;
+        background-color: #F8FFFF;
+    }
+}
+
+#flipbook-controls {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 38px);
+    pointer-events: none;
+}
+
+.back, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: auto;
+    border: none;
+    background-color: transparent;
+    width: 27%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.back {
+    left: 20.4vw;
+    /* border: 2px solid red; */
+}
+
+.next {
+    right: 20.4vw;
+    /* border: 2px solid blue; */
+}
+
+#buttons {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        padding: 1%;
+        margin: 0% 2% 2% 0%;
+        font-size: 1.2rem;
+    }
 }

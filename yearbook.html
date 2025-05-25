@@ -28,14 +28,28 @@
         </nav>
 
         <main class = "yearbook">
-            <!-- <img src="./Images/Icons/Yearbook-Icon.png"> -->
-            <h1>Yearbook</h1>
+            <div class="header">
+                <img class="yb-icon" src="./Images/Icons/Yearbook-Icon.png">
+                <h1>Yearbook</h1>
+            </div>
 
-            <div id="flipbook-container"></div>
-            <button onclick="viewer.flip_back()">Back</button>
-            <button onclick="viewer.flip_forward()">Next</button>
-            <button onclick="viewer.zoom()">Zoom</button>
+            <div id="flipbook-part">
+                <div id="flipbook-container"></div>  
+                <div id="flipbook-controls">
+                    <button class="back" onclick="viewer.flip_back()"></button>
+                    <button class="next" onclick="viewer.flip_forward()"></button>
+                </div>
+                <br><br>
+                <img class="coverpage" src="./flipbook-viewer/pages/cover.png" onclick="flipCover()">
+            </div>
+
+            <div id="buttons">
+                <button onclick="viewer.flip_back()"><- Back</button>
+                <button onclick="viewer.flip_forward()">Next -></button>
+            </div>
+
         </main>
+
     </body>
 </html>
 

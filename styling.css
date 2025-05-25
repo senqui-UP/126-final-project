@@ -32,6 +32,12 @@ nav {
               text-decoration: none;
               margin-left: 10px;}
     a:hover { color: #004AAD}
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .acc-icon {
