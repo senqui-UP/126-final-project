@@ -84,7 +84,7 @@ header("Content-Type: text/html");
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Freedom Wall</title>
+        <title>Freedom Wall | UNCENSORED 23</title>
         <meta charset = "UTF-8">
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
         <link rel="icon" type="image/x-icon" href="Images/Icon.png">
