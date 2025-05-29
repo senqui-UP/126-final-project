@@ -4,21 +4,22 @@ session_start();
 include 'DBConnector.php';
 
 // Set JSON content-type early for fetch() responses
-header("Content-Type: application/json");
+// header("Content-Type: application/json");
 
 // Helper to detect if this is a fetch/AJAX call
 function isApiRequest() {
-    return $_SERVER['REQUEST_METHOD'] === 'POST' || 
-           ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['fetch']));
+    return ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) ||
+           ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['fetch']) && $GET['fetch'] === 'posts');
 }
 
 // Handle unauthenticated access differently for API and normal browser
 if (!isset($_SESSION['user_id'])) {
     if (isApiRequest()) {
+        header("Content-Type: application/json");
         echo json_encode(["status" => "error", "message" => "Not logged in"]);
     } else {
         // Switch to text/html for regular browser redirect
-        header("Content-Type: text/html");
+        // header("Content-Type: text/html");
         header("Location: login.php");
     }
     exit;
@@ -26,9 +27,10 @@ if (!isset($_SESSION['user_id'])) {
 
 // ==== POST a new message ====
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
+    header("Content-Type: application/json");
+    
     $content = trim($_POST['content']);
     $acct_user_id = $_SESSION['user_id'] ?? null;
-
     $reply_to = isset($_POST['reply_to']) && is_numeric($_POST['reply_to']) ? intval($_POST['reply_to']) : null;
 
     if (!$acct_user_id || $content === '') {
@@ -57,6 +59,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['content'])) {
 
 // ==== GET all posts ====
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['fetch']) && $_GET['fetch'] === 'posts') {
+    header("Content-Type: application/json");
+
     $sql = "SELECT posts.postID, posts.content, posts.reply_to
             FROM posting 
             JOIN posts ON posting.postID = posts.postID 
@@ -130,7 +134,7 @@ header("Content-Type: text/html");
             </div>
         </div>
 
-        <script src="scripts-freedomwall.js"></script>
+        
 
         <div class="poll">
             <div class="poll-header">
@@ -151,6 +155,7 @@ header("Content-Type: text/html");
             <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3UDC6HwoPcNSZwUdY0nzKI?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
+        <script src="scripts-freedomwall.js"></script>
         <script src="scripts-poll.js"></script>
         
     </body>

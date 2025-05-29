@@ -9,6 +9,7 @@ let replyingTo = null;
 window.onload = loadPosts;
 
 document.addEventListener("DOMContentLoaded", function () {
+  loadPosts();
   document.getElementById("reply-banner").style.display = "none";
   document.getElementById("cancel-button").style.display = "none";
     
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function loadPosts() {
+  console.log("Fetching posts");
   fetch('freedomwall.php?fetch=posts')
     .then(res => res.json())
     .then(data => {
