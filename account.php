@@ -42,7 +42,7 @@ $post_result = $post_stmt->get_result();
         <meta charset = "UTF-8">
         <meta name = "author" content = "Contreras-DelRosario-Quindao">
 
-        <title>Account Info</title>
+        <title>Account | UNCENSORED 23</title>
         <link rel="icon" type="image/x-icon" href="./Images/Icon.png">  
         <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="styling-accountinfo.css">
