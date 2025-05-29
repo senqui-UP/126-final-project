@@ -4,8 +4,9 @@
 //import * as flipbook from '../src'
 
 const flipbook = window.flipbook;
-
 import * as book from './script-yb-images.js'
+
+// FLIPBOOK FUNCTIONS
 
 function main() {
 function initializeFlipbook(pages) {
@@ -14,13 +15,14 @@ function initializeFlipbook(pages) {
       console.error(err);
     } else {
       flipbook.init(bookObj, 'flipbook-container', {
-        width: window.innerWidth * 0.48,
-        height: window.innerHeight * 0.75,
-        backgroundColor: "white"
+          width: window.innerWidth * 0.48,
+          height: window.innerHeight * 0.75,
+          backgroundColor: '#00285D'
       }, (err, viewer) => {
         if (err) { console.error(err) }
-        window.viewer = viewer;
-        viewer.on('seen', n => console.log('page number: ' + n));
+          window.viewer = viewer;
+          viewer.on('seen', n => console.log('page number: ' + n));
+          viewer.flip_forward();
       });
     }
   });
@@ -70,6 +72,9 @@ window.onload = function () {
   }
 
 main()
+
+
+// EXTRA FUNCTIONS
 
 window.flipCover = function() {
     document.querySelector('.coverpage').style.display = 'none';

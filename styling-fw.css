@@ -17,7 +17,8 @@ body {
   left: 8%;
   top: 15%;
   position: absolute;
-  background-color: #004aad;
+  background-image: url(./Images/fw-backdrop.png);
+  background-repeat: repeat;
 }
 
 .poll {
@@ -34,6 +35,7 @@ body {
   width: 450px;
   height: 155px;
   border: 1px solid blue;
+  padding-top: 20px;
   box-sizing: border-box;
   left: 62%;
   top: 74%;
@@ -51,7 +53,7 @@ body {
   margin: 30px auto;         /* Centers the container */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
+  box-shadow: 0 0 10px #a2a4eb;
   box-sizing: border-box;
 }
 
@@ -105,7 +107,8 @@ body {
   resize: none;
   box-sizing: border-box;
   margin-top: 0;
-  background-color: #F8FFFF;
+  background-color: #491583;
+  color:white;
   /* background-color: white; */
 }
 
@@ -126,7 +129,8 @@ body {
 .post {
   /* border-top: 1px solid #ccc; */
   border: 10px solid #004aad;
-  background-color: #F8FFFF;
+  background-color: #491583;
+  color: white;
   /* background-color: white; */
   padding: 15px 0;
   width: 110%;

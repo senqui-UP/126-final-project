@@ -96,18 +96,21 @@ header("Content-Type: text/html");
     </head>
 
     <body>
-        <header>
-            <nav>
-                <a href="homepage.html">Home</a>
-                <a href="ganaps.html">Ganaps</a>
-                <a href="yearbook.html">Yearbook</a>
-                <a href="freedomwall.php">Freedom Wall</a>
-                &nbsp; &nbsp;
-                <a href="account.php">
-                    <img class="acc-icon" src="./Images/Icons/Account.png">
-                </a>              
-            </nav>
-        </header>
+        <nav>
+            <div class="header">
+                <img class="site-icon" src="./Images/Icons/FW-Icon.png">
+                <h1  style="color: #FEFFFF; text-shadow: 2px 2px 0px rgb(160, 113, 241);">Freedom Wall</h1>
+            </div>
+
+            <a href="homepage.html">Home</a>
+            <a href="ganaps.html">Ganaps</a>
+            <a href="yearbook.html">Yearbook</a>
+            <a href="freedomwall.php">Freedom Wall</a>
+            &nbsp; &nbsp;
+            <a href="account.php">
+                <img class="acc-icon" src="./Images/Icons/Account.png">
+            </a>              
+        </nav>
 
         <div class="freedomWall">
             <!-- <h1>Freedom Wall</h1> -->

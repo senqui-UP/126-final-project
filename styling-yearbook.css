@@ -8,35 +8,15 @@ body {
     /* background-image: url(./Images/homepage/); */
     background-color: #F8FFFF;
     overflow-x: hidden;
+    overflow-y: hidden;
     padding-top: 3%;
 }
 
 .yearbook {
-    padding: 0% 5% 5% 5%;
+    padding: 0% 5% 0% 5%;
+    margin-bottom: 0;
     align-items: center;
     justify-content: center;
-
-    .yb-icon {
-        width: 90px;
-        height: 90px;
-        display: inline-flex;
-        vertical-align: middle;
-    }
-    
-    h1 {
-        color: #004AAD;
-        text-shadow: 3px 3px 2px #5de0e6;
-        font-size: 50px;
-        display: inline-flex;
-        vertical-align: middle;
-        justify-content: center;
-        align-items: center top;
-    }
-
-    .header {
-        width: 100%;
-        text-align: center;
-    }
 }
 
 #flipbook-container {
@@ -102,13 +82,19 @@ body {
 }
 
 #buttons {
+    margin-top: -10px;
     display: none;
     justify-content: center;
     align-items: center;
 
     button {
-        padding: 1%;
-        margin: 0% 2% 2% 0%;
-        font-size: 1.2rem;
+        padding: 0.5%;
+        border: 2px solid #112045;
+        border-radius: 8px;
+        margin: 0% 1.5% 1.5% 0%;
+
+        color: #F8FFFF;
+        background-color: #00285D;
+        font-size: 1rem;
     }
 }

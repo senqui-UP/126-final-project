@@ -9,15 +9,6 @@
     font-weight: 400;
     font-style: normal;
 }  
-
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10000;
-    width: 100%;
-    height: fit-content;
-}
-
 nav {
     background-color: #1A090D;   
     background-size: cover;
@@ -28,16 +19,38 @@ nav {
     height: auto;
     text-align: right;
 
-    a       { color: #F8FFFF;
-              text-decoration: none;
-              margin-left: 10px;}
-    a:hover { color: #004AAD}
-
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1000;
+    z-index: 9999999;
+
+    a       { color: #F8FFFF;
+              text-decoration: none;
+              margin-left: 10px;}
+    a:hover { color: #004AAD}
+}
+
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    text-align: left;
+    align-items: center;
+    display: flex;
+
+    .site-icon {
+        width: 3.5vw;
+        display: inline-flex;
+    }
+
+    .header h1 {
+        top: -100px;
+        font-size: 30px;
+        display: inline-flex;
+    }
 }
 
 .acc-icon {
