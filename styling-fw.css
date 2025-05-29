@@ -1,5 +1,15 @@
 * {
   font-family: Pangolin, sans-serif;
+<<<<<<< Updated upstream
+=======
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F8FFFF;
+>>>>>>> Stashed changes
 }
 
 .freedomWall {
@@ -317,6 +327,7 @@
   box-sizing: border-box;
   margin-top: 0;
   background-color: #491583;
+  border: 1px solid #491583;
   color:white;
   /* background-color: white; */
 }
@@ -328,6 +339,16 @@
   margin-left: 707px;
 }
 
+.post-box button:hover {
+  opacity: 0.9;
+  color: purple;
+}
+
+::placeholder {
+  color: white;
+  font-size: 18px;
+}
+
 .posts-container {
   margin-top: 20px;
   overflow: visible;
@@ -337,14 +358,15 @@
 
 .post {
   /* border-top: 1px solid #ccc; */
-  border: 10px solid #004aad;
+  border: none;
   background-color: #491583;
   color: white;
-  /* background-color: white; */
+  font-size: 18px;
   padding: 15px 0;
   width: 110%;
   box-sizing: border-box;
   margin-left: 15px;
+  margin-bottom: 10px;
 }
 
 .post-footer {
@@ -353,8 +375,8 @@
 
 .message {
   margin-left: 20px;
-  margin-bottom: 10px;
-  padding: 10px;
+  /* margin-bottom: 5px; */
+  padding: 5px;
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -368,26 +390,26 @@
 }
 
 .postID {
-  color: #004aad;
+  color: violet;
   font-weight: bold;
   text-decoration: underline;
 }
 
 .postID:hover {
   opacity: 0.9;
-  color: lightblue;
+  color: rgb(168, 0, 224);
   cursor: pointer;
 }
 
 .repID {
-  color: blue;
+  color: violet;
   font-weight: bold;
   text-decoration: underline;
 }
 
 .repID:hover {
   opacity: 0.9;
-  color: lightblue;
+  color: rgb(168, 0, 224);
   cursor: pointer;
 }
 
@@ -417,23 +439,23 @@
 }
 
 .reply-button, .flag-button {
-  background-color: #F8FFFF;
-  /* background-color: white; */
+  background-color: #491583;
+  color: white;
   border: none;
 }
 
 .material-symbols-outlined:hover {
   opacity: 0.9;
-  color: lightblue;
+  color: violet;
   cursor: pointer;
 }
 
 .reply-button {
-  margin-left: 410px;
+  margin-left: 415px;
 }
 
 .flag-button {
-  margin-left: 16px;
+  margin-left: 19px;
 }
 
 .replies {
