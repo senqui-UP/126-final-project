@@ -99,7 +99,7 @@ header("Content-Type: text/html");
         <nav>
             <div class="header">
                 <img class="site-icon" src="./Images/Icons/FW-Icon.png">
-                <h1  style="color: #FEFFFF; text-shadow: 2px 2px 0px rgb(160, 113, 241);">Freedom Wall</h1>
+                <h1  style="color: #FEFFFF; text-shadow: 2px 2px 0px rgb(160, 113, 241); margin-left: 5px;">Freedom Wall</h1>
             </div>
 
             <a href="homepage.html">Home</a>

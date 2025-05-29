@@ -44,6 +44,8 @@ nav {
     .site-icon {
         width: 3.5vw;
         display: inline-flex;
+        margin-left: 20px;
+        margin-right: 5px;
     }
 
     .header h1 {
