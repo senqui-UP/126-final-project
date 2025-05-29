@@ -1,15 +1,7 @@
 * {
   font-family: Pangolin, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background-color: #F8FFFF;
-  /* background-image: url(https://cdn.pixabay.com/photo/2021/06/19/20/39/stars-6349426_960_720.jpg); */
-  /* background-image: radial-gradient(circle at 50% 50%,#af55e7,#004aad); */
-}
 
 .freedomWall {
   width: 810px;
@@ -224,6 +216,5 @@ body {
 }
 
 .replies {
-  /* border-top: 1px solid #ccc; */
   max-width: 100%;
 }
