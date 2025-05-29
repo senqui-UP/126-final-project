@@ -7,6 +7,7 @@
 
 body {
   background-color: #F8FFFF;
+  /* background-color: #3a205c; */
 }
 
 .freedomWall {
@@ -18,7 +19,6 @@ body {
   background-image: url(./Images/fw-backdrop.png);
   background-repeat: repeat;
 }
-
 
 .poll{
   width: 29.5%;
@@ -326,7 +326,6 @@ body {
   background-color: #491583;
   border: 1px solid #491583;
   color:white;
-  /* background-color: white; */
 }
 
 .post-box button {

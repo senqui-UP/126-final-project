@@ -5,7 +5,11 @@
 }
 
 body {
-    background-color: #F8FFFF;
+    background-image: url(./Images/homepage/Homescreen.png);
+    background-position: bottom;
+    background-size: cover;
+    overflow: hidden;
+    background-attachment: fixed;
 }
 
 .wrapper {
@@ -81,7 +85,7 @@ button:hover {
 
 .title {
     border-radius: 10px;
-    background-color: white;
+    background-color: #60a5ff;
     z-index: 2;
     width: 52.3%;
     position: absolute;
@@ -97,7 +101,8 @@ ul.fw-entries-list {
 li.entries {
     margin-left: 10%;
     border-radius: 10px;
-    background-color: #F8FFFF;
+    /* background-color: #F8FFFF; */
+    background-color: rgb(183, 205, 255);
     width: 80%;
     box-sizing: border-box;
     padding: 15px;
@@ -134,10 +139,10 @@ li.entries {
 
 .entries.collapsible {
     cursor: pointer;
-    transition: max-height 0.4s ease-in-out; /* Creates a smooth animation */
+    transition: max-height 0.4s ease-in-out; 
 }
 
-/* This is the style for when the item IS collapsed */
+
 .entries.collapsible.collapsed {
     max-height: 200px; /* This should match the 'collapseThreshold' in the JS */
     overflow: hidden;  /* This hides the text that doesn't fit */
@@ -151,5 +156,5 @@ li.entries {
     left: 0;
     right: 0;
     height: 40px;
-    background: linear-gradient(to bottom, transparent, white); /* IMPORTANT: Change 'white' if your background is a different color */
+    background: linear-gradient(to bottom, transparent, white); 
 }
