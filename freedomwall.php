@@ -97,6 +97,11 @@ header("Content-Type: text/html");
 
     <body>
         <nav>
+            <div class="header">
+                <img class="site-icon" src="./Images/Icons/FW-Icon.png">
+                <h1  style="color: #FEFFFF; text-shadow: 2px 2px 0px rgb(160, 113, 241);">Freedom Wall</h1>
+            </div>
+
             <a href="homepage.html">Home</a>
             <a href="ganaps.html">Ganaps</a>
             <a href="yearbook.html">Yearbook</a>

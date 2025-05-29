@@ -12,34 +12,20 @@
     body {
         display: flex;
         flex-direction: column;
-        /*background-image: url(./Images/ganaps/bg.png);*/
-        background-color: #F8FFFF;  
-    }
-
-    nav {
-        background-color: #1A090D;   
+        background-image: url(./Images/ganaps/Background.png);
         background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
-        overflow: hidden;
-        padding: 1%;
-        height: auto;
-        text-align: right;
-
-        a       { color: #F8FFFF; }
-        a:hover { color: #004AAD}
-        font-family: 'Pangolin', sans-serif;
+        /* background-color: #F8FFFF;   */
     }
 
     main {
-        padding-top: 80px;
+        padding-top: 5vh;
         font-family: 'Pangolin', sans-serif;
     }
 
     h1 {
         margin-left: 10px;
         margin-bottom: 10px;
-        color: #003272;
+        color: #008BE1;
         text-align: left;
     }
 
@@ -99,7 +85,7 @@
     }
     
     .card-content h3 {
-        color: #004AAD;
+        color: #03abb4;
         margin-bottom: 10px;
         font-size: 1.1rem;
     }
@@ -136,6 +122,6 @@
         opacity: 0.7;
     }
     .swiper-pagination-bullet-active {
-        background: #004AAD;
+        background: #5DE0E6;
         opacity: 1;
     }
