@@ -14,19 +14,6 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // Select a random poll only once per session
-if (!isset($_SESSION['poll_id'])) {
-    $pollRes = $conn->query("SELECT poll_id FROM poll ORDER BY RAND() LIMIT 1");
-    if (!$pollRes) {
-        echo json_encode(["status" => "error", "message" => "Poll query failed: " . $conn->error]);
-        exit;
-    }
-    if ($pollRes->num_rows === 0) {
-        echo json_encode(["status" => "error", "message" => "No polls found"]);
-        exit;
-    }
-    $row = $pollRes->fetch_assoc();
-    $_SESSION['poll_id'] = (int)$row['poll_id'];
-}
 
 // Use the poll ID stored in the session
 $poll_id = $_SESSION['poll_id'];

@@ -2,7 +2,6 @@
   font-family: Pangolin, sans-serif;
 }
 
-
 .freedomWall {
   width: 810px;
   height: 600%;
@@ -12,24 +11,243 @@
   background-color: #004aad;
 }
 
-.poll {
-  width: 450px;
-  height: 410px;
-  border: 1px solid blue;
-  box-sizing: border-box;
-  left: 62%;
+
+.poll{
+  width: 29.5%;
+  height: 58%;
   top: 15%;
+  left: 62%;
+  background: #fcf9ff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   position: fixed;
+   box-sizing: border-box;
+}
+
+.poll h2 {
+  font-size: 1.7rem;
+  margin-bottom: 1rem;
+  margin-top: 3.8rem;;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+}
+
+.poll label {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.poll label, .poll-option {
+  width: 90%;               
+  margin: 0 auto 8px auto; 
+  padding: 10px 32px;        
+  display: block;            
+  text-align: left;
+  box-sizing: border-box;   
+  transition: all 0.3s ease;
+}
+
+.poll label:hover {
+  background-color: #eae4f2;
+  border-color: #5f329b;
+}
+
+.poll-option {
+  display: flex;
+  font-size: large;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  margin-bottom: 5px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+#option-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+
+.poll-option input[type="radio"] {
+  margin-right: 10px;
+}
+
+.poll-option:hover {
+  background-color: #eae4f2;
+}
+
+.poll-option.selected {
+  background-color: #5f329b;
+  border-color: #3a205c;
+  color: #fff;
+}
+
+.poll-option.selected:hover {
+  background-color: #5f329b;
+  border-color: #3a205c;
+  color: #fff;
+}
+
+.poll-option.selected .vote-info {
+  color: #fff;
+}
+
+.vote-info {
+  margin-left: auto;
+  font-weight: normal;
+  color: #666;
+  margin-left: 1.2rem;
+}
+
+.poll button {
+  display: block;
+  width: 90%;
+  padding: 12px;
+  background-color: #5f329b;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-left: auto; 
+  margin-right: auto;  
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+  align-items: center;
+}
+
+.poll button:hover {
+  background-color: #004aad;
+}
+
+
+/*pop-up page for other polls*/
+.poll-modal {
+  display: none;
+  position: fixed;
+  z-index: 99999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  overflow: auto;
+  background: rgba(0,0,0,0.5);
+}
+
+.poll-modal-content {
+  background: #fcf9ff;
+  margin: 5% auto;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* modal card styling */
+.modal-poll-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 24px;
+  padding: 18px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.modal-poll-question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #3a1f5d;
+}
+
+.modal-poll-options {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.modal-poll-option {
+  background: #5f329b;
+  border-radius: 12px;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: white;
+}
+
+.modal-poll-total {
+  font-size: 0.98rem;
+  color: #c1bfbf;
+  margin-top: 6px;
+  text-align: right;
+}
+
+.poll-modal-close {
+  position: absolute;
+  top: 12px; right: 18px;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  font-size: 2rem;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  background-color: #5f329b;
+  border-radius: 50%;
+}
+
+.poll-modal-btn.small-btn {
+    position: absolute;
+    right: 6%;
+    z-index: 20;
+    padding: 4px 8px;
+    font-size: 1.1rem;
+    border-radius: 50%;
+    background: #5f329b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+    transition: background 0.2s;
+}
+.poll-modal-btn.small-btn:hover {
+    background: #3a205c;
 }
 
 .spotify {
   width: 450px;
   height: 155px;
-  border: 1px solid blue;
   box-sizing: border-box;
   left: 62%;
   top: 74%;
   position: fixed;
+  z-index: -10;
 }
 
 /* .freedomWall h1 {

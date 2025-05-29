@@ -143,7 +143,7 @@ header("Content-Type: text/html");
         </div>
         
         <div class="spotify">
-            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0njbZ1fbv5llNEsrTfBLcp?utm_source=generator&theme=0" width="100%" height="350" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/3UDC6HwoPcNSZwUdY0nzKI?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
 
         <script src="scripts-poll.js"></script>

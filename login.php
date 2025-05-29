@@ -27,6 +27,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $error = "Incorrect password.";
             } else {
                 $_SESSION['user_id'] = $user['id'];
+
+                // Set a random poll for this session after successful login
+                unset($_SESSION['poll_id']);
+                $pollRes = $conn->query("SELECT poll_id FROM poll ORDER BY RAND() LIMIT 1");
+                if ($pollRes && $pollRes->num_rows > 0) {
+                    $row = $pollRes->fetch_assoc();
+                    $_SESSION['poll_id'] = (int)$row['poll_id'];
+                }
+
                 header("Location: homepage.html");
                 exit;
             }
@@ -35,6 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         }
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
