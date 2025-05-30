@@ -69,7 +69,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST"){
                     <br>
 
                     <label for="email"><b>Email</b></label>
-                    <input type="text" placeholder="Enter Email" name="email" required>
+                    <input type="email" placeholder="Enter Email" name="email" required>
                     <br>
                 
                     <label for="password"><b>Password</b></label>

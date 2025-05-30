@@ -74,7 +74,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <?php endif; ?>
 
                 <label for="email"><b>Email</b></label>
-                <input type="text" id="email" placeholder="Enter Email" name="email" required>
+                <input type="email" id="email" placeholder="Enter Email" name="email" required>
                 <br>
 
                 <label for="password"><b>Password</b></label>
