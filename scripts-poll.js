@@ -62,7 +62,6 @@ function submitVote(pollId) {
     })
     .then(response => response.json())
     .then(data => {
-        alert(data.message);
         if (data.status === "success") {
             // fetch and display poll results after voting
             fetchPollResults(pollId, optionId);
